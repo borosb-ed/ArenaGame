@@ -51,7 +51,28 @@ namespace ArenaGame
             return _health > 0;
         }
 
-        public string GetDesciption()
+        public virtual bool TakeDamage(int amount) 
+        {
+            if(amount < 1 || !IsAlive())
+            {
+                return false;
+            }
+            Health -= amount;
+            return true;
+        }
+
+        public bool Heal(int amount)
+        {
+            if (amount < 1 || !IsAlive())
+            {
+                return false;
+            }
+            Health += amount;
+            return true;
+        }
+
+
+        public virtual string GetDesciption()
         {
             return $"{Name} ({Health})";
         }

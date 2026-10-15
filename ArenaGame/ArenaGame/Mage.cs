@@ -30,5 +30,10 @@ namespace ArenaGame
         {
             Mana = mana;
         }
+
+        public override string GetDesciption()
+        {
+            return base.GetDesciption() + $" - mana:{Mana}";
+        }
     }
 }

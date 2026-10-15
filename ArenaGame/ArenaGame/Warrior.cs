@@ -26,5 +26,15 @@ namespace ArenaGame
         {
             Armor = armor;
         }
+
+        public override string GetDesciption()
+        {
+            return base.GetDesciption() + $" - armor:{Armor}";
+        }
+
+        public override bool TakeDamage(int amount)
+        {
+            return base.TakeDamage(amount - Armor);
+        }
     }
 }

@@ -24,6 +24,22 @@
 
             Console.WriteLine("Total number of characters: "
                 + Character.Count);
+
+            Console.WriteLine("Damage warrior: " + w.TakeDamage(30));
+            Console.WriteLine("Warrior health: " + w.Health);
+            Console.WriteLine("Heal warrior: " + w.Heal(30));
+            Console.WriteLine("Warrior health: " + w.Health);
+
+            Console.WriteLine("Damage mage: " + m.TakeDamage(50));
+            Console.WriteLine("Mage health: " + m.Health);
+            Console.WriteLine("Heal mage: " + m.Heal(80));
+            Console.WriteLine("Mage health: " + m.Health);
+
+
+
+
+
+
         }
     }
 }
